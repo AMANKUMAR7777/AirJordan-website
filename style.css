@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #F2F2F2;
+}
+body{
+    background-color: #020202;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+#main {
+    width: 100%;
+}
+
+.nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 8vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4vw;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0); /* Semi-transparent background */
+    z-index: 1000; /* Ensure it's above other content */
+}
+.logo {
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.nav a{
+    text-decoration: none;
+    font-size: 1.6rem;
+    padding: 0 1rem;
+    font-weight: 400;
+    font-family: 'Great Vibes', cursive;
+}
+
+#page1 {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 4vw;
+}
+#page1 .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+#page1 h1 {
+    padding-top: 30vh;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22rem; 
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.head {
+    display: inline-block;
+    font-size: inherit;
+    line-height: inherit;
+    vertical-align: middle;
+    opacity: 0;
+    transform: translateY(100%);
+}
+
+.viewer-crop {
+    display: inline-block;
+    width: 22rem;
+    height: 22rem;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+.viewer-crop spline-viewer {
+    width: 100%;
+    height: 100%;
+}
+
+#page1 p {
+    font-style: italic;
+    font-size: 6rem;
+    width: 50%;
+    font-family: 'Cormorant Garamond', serif;
+    opacity: 0; 
+    transform: translateY(50px);
+    overflow: hidden;
+  }
+
+  #page1 p span {
+    font-style: normal;
+    font-family: 'Cinzel', serif;
+    opacity: 0;
+    overflow: hidden;
+  }
+
+  #page1 p img {
+    height: 6rem;
+    width: auto;
+    display: inline-block; 
+    transform: translate(0%, 20%);
+    transition: all .3s ease-out;
+    opacity: 0; 
+    overflow: hidden;
+    transform: scale(0.8);
+  }
+
+#page4 {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.head:nth-child(4){
+    padding: 0 2vw;
+}
+
+#page5{
+    height: 100vh;
+    width: 100%;
+}
+#page6 {
+    height: 100vh;
+    width: 100%;
+}
+
