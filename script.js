@@ -92,3 +92,32 @@ gsap.to("#page1 p", {
     ease: "cubic-bezier(0.23, 1, 0.320, 1)",
     duration: 1,
   });
+
+
+
+  
+  var boxes = document.querySelectorAll(".box");
+  var crsr = document.querySelector(".cursor");
+  
+  document.addEventListener("mousemove", function(event) {
+      crsr.style.left = event.pageX + "px";
+      crsr.style.top = event.pageY + "px";
+  });
+  
+  boxes.forEach(function(elem) {
+      elem.addEventListener("mouseenter", function() {
+          var att = elem.getAttribute("data-image");
+          crsr.style.width = "470px";
+          crsr.style.height = "370px";
+          crsr.style.borderRadius = "0";
+          crsr.style.backgroundImage = `url(${att})`;
+      });
+  
+      elem.addEventListener("mouseleave", function() {
+          crsr.style.width = "0px";
+          crsr.style.height = "0px";
+          crsr.style.borderRadius = "50%";
+          crsr.style.backgroundImage = "none";
+      });
+  });
+  
