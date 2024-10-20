@@ -1,3 +1,34 @@
+document.onreadystatechange = function() {
+  const mainContent = document.getElementById('main');
+  const preloader = document.getElementById('preloader');
+  const counter = document.getElementById('counter');
+  
+  // Total number of resources to be loaded
+  let totalResources = 100; // You can adjust based on your needs
+  
+  function updateCounter(percentage) {
+      counter.innerHTML = percentage + "%";
+  }
+
+  // Fake progress calculation for demonstration (you'll replace it with real resource tracking)
+  let loadedResources = 0;
+
+  const fakeProgress = setInterval(function() {
+      loadedResources += 1; // Simulate resources loading
+      
+      let percentage = Math.floor((loadedResources / totalResources) * 100);
+      updateCounter(percentage);
+      
+      if (loadedResources >= totalResources) {
+          clearInterval(fakeProgress);
+          preloader.style.display = "none";
+          mainContent.style.display = "block";
+      }
+  }, 30); // Adjust timing based on actual loading speed
+};
+
+
+
 window.onload = function() {
     var viewers = document.querySelectorAll('spline-viewer');
     viewers.forEach(function(viewer) {
