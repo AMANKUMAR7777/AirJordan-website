@@ -163,7 +163,7 @@ body{
     border-radius: 50%;
     position: absolute;
     z-index: 8;
-    transition: background-image ease 0.5s;
+    transition: background-image ease .5s;
     background-position: center;
     background-size:cover ;
     mix-blend-mode: difference;
@@ -177,7 +177,7 @@ body{
   --light: #ffffff;
   --dark: #000;
 }
-h3 {
+.footer h3 {
   font-family: "Noto Serif Display", serif;
   font-size: 2.3rem;
   font-weight: 300;
@@ -290,3 +290,4 @@ svg {
 .footer_copyright {
   color: var(--light);
 }
+

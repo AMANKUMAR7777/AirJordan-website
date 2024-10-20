@@ -12,9 +12,6 @@ window.onload = function() {
 };
 
 
-
-
-
     gsap.to(".head", {
       opacity: 1,
       y: 0,
@@ -120,4 +117,6 @@ gsap.to("#page1 p", {
           crsr.style.backgroundImage = "none";
       });
   });
-  
+
+
+
